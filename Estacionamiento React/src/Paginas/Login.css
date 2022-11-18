@@ -1,0 +1,1816 @@
+.contenedorlogin{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menulogin{
+    position: relative;
+    width: 400px;
+    height: 400px;
+    background: rgb(51,51,51);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: 0px 0px 50px rgb(0, 0, 0);
+}   
+.menubotones{
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.flechaatras{
+    width: 30px;
+    height: 30px;
+    filter: invert(100%);
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    cursor: pointer;
+}
+
+.ingresolabel{
+    position: absolute;
+    top: 20px;
+    color: white;
+    font-family: 'Rubik', sans-serif;
+    font-size: 50px;
+    text-shadow: 2px 2px 5px black;
+}
+
+.usuarioboton, .encargadoboton, .invitadoboton{
+    width: 150px;
+    height: 50px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 2px solid white;
+    box-shadow: 0px 0px 10px black;
+    font-family: 'Rubik', sans-serif;
+    font-size: 20px;
+    text-shadow: 1px 1px 5px white;
+}
+:is(.usuarioboton, .encargadoboton, .invitadoboton):hover{
+    box-shadow: 0px 0px 5px white;
+}
+.usuarioboton{
+    background: rgb(77, 187, 255);
+}
+.encargadoboton{
+    background: orange;
+}
+.invitadoboton{
+    background: rgb(200,200,200);
+}
+
+.menuusuario{
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: rgb(51,51,51);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+    opacity: 0;
+    z-index: -1;
+}
+
+.usuariolabel{
+    position: absolute;
+    font-family: 'Rubik', sans-serif;
+    font-size: 30px;
+    color: rgb(77, 187, 255);
+    text-shadow: 2px 2px 5px black;
+    top: 10px;
+}
+
+.formusuario{
+    margin-bottom: 120px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+}
+textarea:focus, input:focus,input[type]:focus, button:focus{
+    outline: none;
+}
+.inputusuario, .inputpatenteusuario{
+    width: 250px;
+    height: 40px;
+    border-radius: 10px;
+    background: rgb(51,51,51);
+    font-family: 'Rubik', sans-serif;
+    font-size: 20px;
+    color: white;
+    border: 2px solid rgb(77, 187, 255);
+}
+
+:is(.inputusuario, .inputpatenteusuario)::placeholder{
+    color: rgb(0, 0, 0);
+}
+
+.labelinputusuario, .labelinputpatente{
+    position: absolute;
+    width: 80px;
+    text-align: center;
+    font-family: 'Rubik', sans-serif;
+    font-size: 20px;
+    color: rgb(21, 21, 21);
+    border-radius: 50%;
+    background: rgb(51,51,51,1);
+    opacity: 0;
+    animation: label 0.3s forwards;
+    z-index: -1;
+}
+.labelinputpatente{
+    left: 4px;
+    top: 11px;
+}
+.inputusuario:placeholder-shown + .labelinputusuario{
+    animation: none;
+}
+.inputpatenteusuario:placeholder-shown + .labelinputpatente{
+    animation: none;
+}
+
+.buttonusuario{
+    width: 100px;
+    height: 40px;
+    background: rgb(77, 187, 255);
+    border-radius: 5px;
+    color: white;
+    font-family: 'Rubik', sans-serif;
+    font-size: 20px;
+    text-shadow: 1px 1px 5px black, -1px -1px 5px black;
+    cursor: pointer;
+    box-shadow: 0px 0px 5px black;
+}
+.buttonencargado:hover{
+    background: rgb(42, 173, 255);
+    box-shadow: 0px 0px 10px black;
+}
+
+/* ////////////////////////////////////////// */
+
+.menuencargado{
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: rgb(51,51,51);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+    opacity: 0;
+    z-index: -1;
+}
+
+.encargadolabel{
+    position: absolute;
+    font-family: 'Rubik', sans-serif;
+    font-size: 30px;
+    color: orange;
+    text-shadow: 2px 2px 5px black;
+    top: 10px;
+}
+
+.formencargado{
+    margin-bottom: 80px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+}
+textarea:focus, input:focus,input[type]:focus, button:focus{
+    outline: none;
+}
+.inputencargado, .inputpatenteencargado{
+    width: 250px;
+    height: 40px;
+    border-radius: 10px;
+    background: rgb(51,51,51);
+    font-family: 'Rubik', sans-serif;
+    font-size: 20px;
+    color: white;
+    border: 2px solid orange;
+}
+
+:is(.inputencargado, .inputpatenteencargado)::placeholder{
+    color: rgb(0, 0, 0);
+}
+
+.labelinputencargado, .labelinputpatenteencargado{
+    position: absolute;
+    width: 80px;
+    text-align: center;
+    font-family: 'Rubik', sans-serif;
+    font-size: 20px;
+    color: rgb(21, 21, 21);
+    border-radius: 50%;
+    background: rgb(51,51,51,1);
+    opacity: 0;
+    animation: labelencargado 0.3s forwards;
+    z-index: -1;
+}
+.labelinputencargado{
+    left: 4px;
+    top: 11px;
+}
+.labelinputpatenteencargado{
+    left: 4px;
+    top: 88px;
+    width: 118px;
+}
+.inputencargado:placeholder-shown + .labelinputencargado{
+    animation: none;
+}
+.inputpatenteencargado:placeholder-shown + .labelinputpatenteencargado{
+    animation: none;
+}
+
+.buttonencargado{
+    width: 100px;
+    height: 40px;
+    background: orange;
+    border-radius: 5px;
+    color: white;
+    font-family: 'Rubik', sans-serif;
+    font-size: 20px;
+    text-shadow: 1px 1px 5px black, -1px -1px 5px black;
+    cursor: pointer;
+    box-shadow: 0px 0px 5px black;
+}
+.buttonencargado:hover{
+    background: rgb(198, 129, 0);
+    box-shadow: 0px 0px 10px black;
+}
+
+/* ////////////////////////////////////////// */
+
+.menuinvitado{
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: rgb(51,51,51);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+    opacity: 0;
+    z-index: -1;
+}
+
+.invitadolabel{
+    position: absolute;
+    font-family: 'Rubik', sans-serif;
+    font-size: 30px;
+    color: rgb(200,200,200);
+    text-shadow: 2px 2px 5px black;
+    top: 10px;
+}
+
+.forminvitado{
+    margin-bottom: 20px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+}
+textarea:focus, input:focus,input[type]:focus, button:focus{
+    outline: none;
+}
+.inputinvitado, .inputpatenteinvitado, .inputentradainvitado, .inputsalidainvitado{
+    width: 250px;
+    height: 40px;
+    border-radius: 10px;
+    background: rgb(51,51,51);
+    font-family: 'Rubik', sans-serif;
+    font-size: 20px;
+    color: white;
+    border: 2px solid rgb(200,200,200);
+}
+
+:is(.inputinvitado, .inputpatenteinvitado, .inputentradainvitado, .inputsalidainvitado)::placeholder{
+    color: rgb(0, 0, 0);
+}
+
+.labelinputinvitado, .labelinputpatenteinvitado, .labelinputentradainvitado, .labelinputsalidainvitado{
+    position: absolute;
+    width: 83px;
+    text-align: center;
+    font-family: 'Rubik', sans-serif;
+    font-size: 20px;
+    color: rgb(21, 21, 21);
+    border-radius: 50%;
+    background: rgb(51,51,51,1);
+    opacity: 0;
+    animation: labelinvitado 0.3s forwards;
+    z-index: -1;
+}
+.labelinputentradainvitado{
+    width: 162px;
+    border-radius: 30%;
+}
+.labelinputsalidainvitado{
+    width: 75px;
+}
+.labelinputpatenteinvitado{
+    left: 3px;
+    top: 11px;
+}
+.labelinputentradainvitado{
+    left: 4px;
+    top: 86px;
+}
+.labelinputsalidainvitado{
+    left: 4px;
+    top: 157px;
+}
+.inputpatenteinvitado:placeholder-shown + .labelinputpatenteinvitado{
+    animation: none;
+}
+.inputentradainvitado:placeholder-shown + .labelinputentradainvitado{
+    animation: none;
+}
+.inputsalidainvitado:placeholder-shown + .labelinputsalidainvitado{
+    animation: none;
+}
+
+.buttoninvitado{
+    width: 100px;
+    height: 40px;
+    background: rgb(200,200,200);
+    border-radius: 5px;
+    color: white;
+    font-family: 'Rubik', sans-serif;
+    font-size: 20px;
+    text-shadow: 1px 1px 5px black, -1px -1px 5px black;
+    cursor: pointer;
+    box-shadow: 0px 0px 5px black;
+}
+.buttoninvitado:hover{
+    background: rgb(153, 153, 153);
+    box-shadow: 0px 0px 10px black;
+}
+
+/* ////////////////////////////////////////// */
+
+@keyframes label{
+0%{
+    transform: translateY(0%);
+    color: rgb(0, 0, 0);
+    text-shadow: 0px 0px 0px black;
+    opacity: 0;
+    z-index: -1;
+}
+100%{
+    transform: translateY(-100%);
+    color: rgb(77, 187, 255);
+    text-shadow: 2px 2px 3px black;
+    opacity: 1;
+    z-index: 0;
+}
+}
+@keyframes labelencargado{
+0%{
+    transform: translateY(0%);
+    color: rgb(0, 0, 0);
+    text-shadow: 0px 0px 0px black;
+    opacity: 0;
+    z-index: -1;
+}
+100%{
+    transform: translateY(-100%);
+    color: orange;
+    text-shadow: 2px 2px 3px black;
+    opacity: 1;
+    z-index: 0;
+}
+}
+@keyframes labelinvitado{
+    0%{
+        transform: translateY(0%);
+        color: rgb(0, 0, 0);
+        text-shadow: 0px 0px 0px black;
+        opacity: 0;
+        z-index: -1;
+    }
+    100%{
+        transform: translateY(-100%);
+        color: rgb(200,200,200);
+        text-shadow: 2px 2px 3px black;
+        opacity: 1;
+        z-index: 0;
+    }
+    }
+@keyframes abrir{
+0%{
+    opacity: 0;
+    z-index: -1;
+}
+100%{
+    opacity: 1;
+    z-index: 0;
+}
+}
+@keyframes cerrar{
+0%{
+    opacity: 1;
+    z-index: 0;
+}
+100%{
+    opacity: 0;
+    z-index: -10;
+}
+}
+
+
+/* ///////////// */
+
+.contenedorroles{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: -1;
+    opacity: 0;
+}
+
+.contusuario{
+    position: absolute;
+    width: 600px;
+    height: 400px;
+    background: rgb(51,51,51);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row;
+    box-shadow: 0px 0px 50px black;
+    z-index: -1;
+    opacity: 0;
+}
+
+.qr1{
+    width: 150px;
+    height: 150px;
+}
+
+.lugarhorausuario{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 400px;
+    justify-content: center;
+    gap: 10px;
+}
+.titulodatosusuario{
+    margin-bottom: 50px;
+    font-family: 'Rubik', sans-serif;
+    font-size: 35px;
+    color: white;
+    text-shadow: 2px 2px 10px black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.plazausuario, .entradausuario, .salidausuario{
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.plazausuario label:nth-child(1), .entradausuario label:nth-child(1), .salidausuario label:nth-child(1){
+    color: white;
+    font-family: 'Rubik', sans-serif;
+    font-size: 25px;
+    text-shadow: 2px 2px 5px black;
+}
+.plazausuario label:nth-child(2), .entradausuario label:nth-child(2), .salidausuario label:nth-child(2){
+    color: rgb(77, 187, 255);
+    font-family: 'Rubik', sans-serif;
+    font-size: 25px;
+    text-shadow: 2px 2px 5px black;
+}
+
+
+@keyframes abrirconts{
+0%{
+    opacity: 0;
+    z-index: -1;
+}
+100%{
+    opacity: 1;
+    z-index: 0;
+    backdrop-filter: invert(0%);
+}
+}
+
+.contenedorerror{
+    position: absolute;
+    width: 100%;
+    height: 60px;
+    z-index: 1;
+    top: 50px;
+    left: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    z-index: -1;
+}
+
+.errorimg{
+    width: 50px;
+    height: 50px;
+}
+
+.errorlabel{
+    color: rgb(255, 68, 68);
+    font-family: 'Rubik', sans-serif;
+    font-size: 20px;
+    text-shadow: 1px 1px 3px black, -1px -1px 3px black;
+}
+
+@keyframes error{
+0%{
+    opacity: 0;
+    z-index: -1;
+}
+100%{
+    opacity: 1;
+    z-index: 0;
+}
+}
+@keyframes errorback{
+    0%{
+        opacity: 1;
+        z-index: 0;
+    }
+    100%{
+        opacity: 0;
+        z-index: -1;
+    }
+    }
+
+@keyframes mareo{
+0%{
+    transform: rotateZ(0deg) scale(0.2);
+}
+10%{
+    transform: rotateZ(30deg);
+}
+30%{
+    transform: rotateZ(-30deg);
+}
+50%{
+    transform: rotateZ(30deg);
+}
+70%{
+    transform: rotateZ(-30deg);
+}
+90%{
+    transform: rotateZ(30deg);
+}
+100%{
+    transform: rotateZ(0deg) scale(1.0);
+}
+}
+
+.xsalir{
+    width: 30px;
+    height: 30px;
+    filter: invert(100%);
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.contencargado{
+    position: absolute;
+    width: 600px;
+    height: 400px;
+    background: rgb(51,51,51);
+    border-radius: 0px 0px 5px 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row;
+    box-shadow: 0px 0px 50px black;
+    z-index: -1;
+    opacity: 0;
+}
+
+.continvitado{
+    position: absolute;
+    width: 600px;
+    height: 400px;
+    background: rgb(51,51,51);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    box-shadow: 0px 0px 50px black;
+    z-index: -1;
+    opacity: 0;
+}
+
+.continvitadobotones{
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+}
+
+.qrinvitado{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.estadoinvitado{
+    font-family: 'Rubik', sans-serif;
+    font-size: 25px;
+    text-shadow: 1px 1px 2px black, -1px -1px 2px black;
+}
+
+.precioinvitado{
+    color: white;
+    font-family: 'Rubik', sans-serif;
+    font-size: 20px;
+    text-shadow: 1px 1px 2px black, -1px -1px 2px black;
+}
+
+.invitadomenuboton{
+    width: 300px;
+    height: 60px;
+    border-radius: 10px;
+    background: rgb(255, 107, 107);
+    font-family: 'Rubik', sans-serif;
+    font-size: 25px;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px black;
+    text-shadow: 1px 1px 5px white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.invitadomenuboton:nth-child(2){
+    background: rgb(200,200,200);
+}
+
+.invitadomenuboton:hover{
+    box-shadow: 0px 0px 10px white;
+}
+
+.datosinvitado{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 300px;
+    justify-content: center;
+    gap: 10px;
+}
+.titulodatosinvitado{
+    margin-bottom: 50px;
+    font-family: 'Rubik', sans-serif;
+    font-size: 35px;
+    color: white;
+    text-shadow: 2px 2px 10px black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.plazainvitado, .entradainvitado, .salidainvitado{
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.plazainvitado label:nth-child(1), .entradainvitado label:nth-child(1), .salidainvitado label:nth-child(1){
+    color: white;
+    font-family: 'Rubik', sans-serif;
+    font-size: 25px;
+    text-shadow: 2px 2px 5px black;
+}
+.plazainvitado label:nth-child(2), .entradainvitado label:nth-child(2), .salidainvitado label:nth-child(2){
+    color: rgb(200, 200, 200);
+    font-family: 'Rubik', sans-serif;
+    font-size: 25px;
+    text-shadow: 2px 2px 5px black;
+}
+
+.conterrorinvitadosalir{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100px;
+    background: rgb(255, 107, 107);
+    z-index: 1;
+    font-family: 'Rubik', sans-serif;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 15px;
+    bottom: -120px;
+    color: black;
+    border: 3px solid black;
+    opacity: 0;
+    z-index: -1;
+}
+.conterrorinvitadosalir label{
+    margin: 0px 10px 0px 10px;
+}
+
+.pagosencargado{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row;
+    width: 600px;
+    height: 400px;
+    opacity: 0;
+    z-index: -1;
+}
+
+.labelpagos{
+    position: absolute;
+    top: 20px;
+    color: white;
+    font-family: 'Rubik', sans-serif;
+    font-size: 25px;
+    text-shadow: 1px 1px 5px black;
+}
+
+.formpagosinvitado{
+    display: flex;
+    height: 200px;
+    width: 100px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.datosnopago{
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+.datosnopago div{
+    display: flex;
+    flex-direction: row;
+    margin: 10px 0px 10px 0px;
+}
+
+.datosnopago label{
+    width: 200px;
+    display: flex;
+    color: white;
+    font-family: 'Rubik', sans-serif;
+    font-size: 25px;
+    justify-content: flex-start;
+    text-shadow: 1px 1px 5px black;
+}
+.datosnopago label:nth-child(2){
+    color: orange;
+    justify-content: flex-end;
+}
+
+.selectpatente{
+    width: 150px;
+    height: 50px;
+    color: white;
+    background: rgb(21,21,21);
+    border: 2px solid black;
+    border-radius: 10px;
+    font-family: 'Rubik', sans-serif;
+    font-size: 20px;
+    box-shadow: 0px 0px 10px black;
+    cursor: pointer;
+}
+
+.cobrarinvitado{
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    background: lime;
+    color: black;
+    font-family: 'Rubik', sans-serif;
+    font-size: 20px;
+    text-shadow: 1px 1px 2px white;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.selectpago{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.infopagoscobros{
+    top: 0px;
+    left: -3px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: lime;
+    font-family: 'Rubik', sans-serif;
+    font-size: 25px;
+    text-shadow: 1px 1px 5px black;
+    opacity: 0;
+}
+
+.solapasencargado{
+    position: absolute;
+    top: -50px;
+    width: 600px;
+    height: 50px;
+}
+.solapapagos, .solapahistorial, .solapausuarios, .solapaescanearsticker{
+    position: absolute;
+    bottom: 0px;
+    width: 150px;
+    height: 40px;
+    background: rgb(21,21,21);
+    border-radius: 5% 5% 0px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-family: 'Rubik', sans-serif;
+    font-size: 20px;
+    border-right: 1px solid rgb(51,51,51);
+    border-left: 1px solid rgb(51,51,51);
+    cursor: pointer;
+}
+.solapapagos{
+    left: 0px;
+    border-left: 0px;
+}
+.solapausuarios{
+    left: 150px;
+}
+.solapahistorial{
+    left: 300px;
+}
+.solapaescanearsticker{
+    left: 450px;
+    border-right: 0px;
+}
+
+:is(.solapapagos, .solapahistorial, .solapausuarios, .solapaescanearsticker):hover{
+    background: rgb(41,41,41);
+}
+
+.usuariosencargado{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 600px;
+    height: 400px;
+    justify-content: center;
+    opacity: 0;
+    z-index: -1;
+}
+
+.labelusuariostit{
+    position: absolute;
+    top: 20px;
+    color: white;
+    font-family: 'Rubik', sans-serif;
+    font-size: 25px;
+    text-shadow: 1px 1px 5px black;
+}
+
+.formborrarusuario{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.formborrarusuario label{
+    position: absolute;
+    bottom: -50px;
+    left: -40px;
+    width: 160px;
+    color: red;
+    text-shadow: 1px 1px 5px black;
+    font-family: 'Rubik', sans-serif;
+    opacity: 0;
+}
+
+.inputborrarusuario{
+    width: 100px;
+    height: 20px;
+    background: rgb(51,51,51);
+    border: 2px solid orange;
+    border-radius: 5px;
+    font-family: 'Rubik', sans-serif;
+    color: white;
+}
+.inputborrarusuario::placeholder{
+    color: black;
+}
+
+.borrarusuariosencargado{
+    position: absolute;
+    top: 30px;
+    width: 60px;
+    height: 20px;
+    border-radius: 5px;
+    background: red;
+    border: 1px solid white;
+    box-shadow: 0px 0px 5px black;
+    color: black;
+    font-family: 'Rubik', sans-serif;
+    font-size: 15px;
+    cursor: pointer;
+}
+.borrarusuariosencargado:hover{
+    box-shadow: 0px 0px 5px white;
+}
+
+.formusuariosenc{
+    display: flex;
+    flex-direction: row;
+}
+
+.formusuariosenc div{
+    margin-top: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttonusuariosenc{
+    display: flex;
+    height: 40px;
+    width: 250px;
+    margin: 13px;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    text-shadow: 1px 1px 5px white;
+    background: orange;
+    font-family: 'Rubik', sans-serif;
+    font-size: 25px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px black;
+    cursor: pointer;
+}
+.buttonusuariosenc:hover{
+    box-shadow: 0px 0px 10px white;
+}
+
+.inputusuariosenc{
+    margin: 10px;
+    width: 250px;
+    height: 40px;
+    border-radius: 10px;
+    background: rgb(51,51,51);
+    font-family: 'Rubik', sans-serif;
+    font-size: 20px;
+    color: white;
+    border: 2px solid orange;
+}
+
+.labelusuariosenc{
+    position: absolute;
+    width: 80px;
+    text-align: center;
+    font-family: 'Rubik', sans-serif;
+    font-size: 20px;
+    color: rgb(21, 21, 21);
+    border-radius: 50%;
+    background: rgb(51,51,51,1);
+    opacity: 0;
+    animation: label 0.3s forwards;
+    z-index: -1;
+}
+
+.inputusuariosenc:placeholder-shown + .labelusuariosenc{
+    animation: none;
+}
+
+.labelusuariosenc:nth-child(2){
+    left: 35px;
+    top: 124px;
+}
+.labelusuariosenc:nth-child(4){
+    left: 35px;
+    top: 190px;
+    width: 84px;
+}
+.labelusuariosenc:nth-child(6){
+    left: 35px;
+    top: 256px;
+    width: 83px;
+}
+.labelusuariosenc:nth-child(8){
+    left: 35px;
+    top: 322px;
+    width: 65px;
+}
+.formusuariosenc div:nth-child(2) .labelusuariosenc:nth-child(2){
+    left: 312px;
+    top: 124px;
+    width: 75px;
+}
+.formusuariosenc div:nth-child(2) .labelusuariosenc:nth-child(4){
+    left: 312px;
+    top: 190px;
+    width: 97px;
+}
+.formusuariosenc div:nth-child(2) .labelusuariosenc:nth-child(6){
+    left: 312px;
+    top: 256px;
+    width: 88px;
+}
+.inputusuariosenc::placeholder{
+    color: rgb(0, 0, 0);
+}
+
+.patenteduplicada{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 360px;
+    left: 340px;
+    width: 200px;
+    color: red;
+    text-shadow: 1px 1px 5px black;
+    font-family: 'Rubik', sans-serif;
+    font-size: 20px;
+    opacity: 0;
+    z-index: -1;
+}
+
+@keyframes patdup {
+0%{
+    opacity: 0;
+    z-index: -1;
+}
+100%{
+    opacity: 1;
+    z-index: 0;
+}
+}
+
+.escanearstickerencargado{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 600px;
+    height: 400px;
+    justify-content: center;
+    opacity: 0;
+    z-index: -1;
+}
+
+.sticker{
+    width: 200px;
+    height: 200px;
+    background: white;
+    position: relative;
+}
+.stickerlinea1{
+    position: absolute;
+    top: 0px;
+    font-family: 'Stick No Bills', sans-serif;
+    text-align: center;
+}
+.stickerlinea2{
+    position: absolute;
+    bottom: 0px;
+    font-family: 'Stick No Bills', sans-serif;
+    text-align: center;
+}
+.qr2{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    bottom: 30px;
+    left: calc(50% - 50px);
+}
+
+.inputsticker{
+    position: absolute;
+    width: 150px;
+    top: 30px;
+    left: 20px;
+    font-family: 'Stick No Bills', sans-serif;
+    font-size: 20px;
+    text-align: center;
+    outline: none;
+    border: none;
+}
+
+.buttonsticker{
+    position: absolute;
+    bottom: -50px;
+    width: 100px;
+    height: 30px;
+    left: 50px;
+    border-radius: 10px;
+    background: orange;
+    color: black;
+    font-family: 'Rubik', sans-serif;
+    font-size: 15px;
+    text-shadow: 1px 1px 5px white;
+    box-shadow: 0px 0px 10px black;
+    cursor: pointer;
+}
+.buttonsticker:hover{
+    box-shadow: 0px 0px 10px white;
+}
+
+.labelsticker{
+    position: absolute;
+    top: 40px;
+    color: white;
+    font-family: 'Rubik', sans-serif;
+    font-size: 25px;
+}
+
+.historialencargado{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 600px;
+    height: 400px;
+    justify-content: center;
+    opacity: 0;
+    z-index: -1;
+}
+
+.dataviewhistorial{
+    width: 400px;
+    height: 300px;
+    background: rgb(41,41,41);
+    box-shadow: 0px 0px 10px black;
+    overflow: scroll;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+}
+.dataviewhistorial::-webkit-scrollbar{
+    width: 10px;
+    background: yellow;
+}
+.dataviewhistorial::-webkit-scrollbar-track{
+    background: rgb(41,41,41);
+}
+.dataviewhistorial::-webkit-scrollbar-thumb{
+    background: white;
+    border-radius: 50px;
+    box-shadow: 0px 0px 10px black;
+}
+
+.historialt1{
+    color: orange;
+    font-family: 'Rubik', sans-serif;
+    font-size: 25px;
+    text-shadow: 1px 1px 5px black;
+    margin: 5px 0px 10px 0px;
+}
+
+.dataviewhistorial div{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin: 0px 20px 0px 20px;
+    color: white;
+    font-family: 'Rubik', sans-serif;
+    font-size: 20px;
+    text-shadow: 1px 1px 5px black;
+}
+.dataviewhistorial label{
+    display: flex;
+    flex-direction: column;
+    margin: 5px 0px 5px 0px;
+}
+.dataviewhistorial label::after{
+    content: '';
+    width: 400%;
+    height: 1px;
+    background: rgb(100,100,100);
+}
+
+.contenedoradmin{
+    position: absolute;
+    width: 600px;
+    height: 400px;
+    background: rgb(51,51,51);
+    border-radius: 0px 0px 5px 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row;
+    box-shadow: 0px 0px 50px black;
+    z-index: -1;
+    opacity: 0;
+}
+
+.solapasadmin{
+    position: absolute;
+    top: -50px;
+    width: 600px;
+    height: 50px;
+}
+
+.solapaencargados, .solapapisos, .solapainformes{
+    position: absolute;
+    bottom: 0px;
+    width: 200px;
+    height: 40px;
+    background: rgb(21,21,21);
+    border-radius: 5% 5% 0px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-family: 'Rubik', sans-serif;
+    font-size: 20px;
+    border-right: 1px solid rgb(51,51,51);
+    border-left: 1px solid rgb(51,51,51);
+    cursor: pointer;
+}
+.solapaencargados{
+    left: 0px;
+    border-left: 0px;
+}
+.solapapisos{
+    left: 200px;
+}
+.solapainformes{
+    left: 400px;
+}
+:is(.solapaencargados, .solapapisos, .solapainformes):hover{
+    background: rgb(41,41,41);
+}
+
+.encargadosadmin{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 600px;
+    height: 400px;
+    justify-content: center;
+    opacity: 0;
+    z-index: -1;
+}
+
+.formencadmin{
+    display: flex;
+    flex-direction: row;
+}
+
+.formencadmin div{
+    margin-top: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttonencadmin{
+    display: flex;
+    height: 40px;
+    width: 250px;
+    margin: 13px;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    text-shadow: 1px 1px 5px white;
+    background: orange;
+    font-family: 'Rubik', sans-serif;
+    font-size: 25px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px black;
+    cursor: pointer;
+}
+.buttonencadmin:hover{
+    box-shadow: 0px 0px 10px white;
+}
+
+.inputencadmin{
+    margin: 10px;
+    width: 250px;
+    height: 40px;
+    border-radius: 10px;
+    background: rgb(51,51,51);
+    font-family: 'Rubik', sans-serif;
+    font-size: 20px;
+    color: white;
+    border: 2px solid orange;
+}
+
+.labelencadmin{
+    position: absolute;
+    width: 80px;
+    text-align: center;
+    font-family: 'Rubik', sans-serif;
+    font-size: 20px;
+    color: rgb(208, 0, 0);
+    border-radius: 50%;
+    background: rgb(51,51,51,1);
+    opacity: 0;
+    animation: labelencargado 0.3s forwards;
+    z-index: -1;
+}
+
+.inputencadmin:placeholder-shown + .labelencadmin{
+    animation: none;
+}
+
+.labelencadmin:nth-child(2){
+    left: 35px;
+    top: 124px;
+}
+.labelencadmin:nth-child(4){
+    left: 35px;
+    top: 190px;
+    width: 118px;
+}
+.labelencadmin:nth-child(6){
+    left: 35px;
+    top: 256px;
+    width: 80px;
+}
+.labelencadmin:nth-child(8){
+    left: 35px;
+    top: 322px;
+    width: 85px;
+}
+.formencadmin div:nth-child(2) .labelencadmin:nth-child(2){
+    left: 312px;
+    top: 158px;
+    width: 40px;
+}
+.formencadmin div:nth-child(2) .labelencadmin:nth-child(4){
+    left: 312px;
+    top: 224px;
+    width: 78px;
+}
+.inputencadmin::placeholder{
+    color: rgb(0, 0, 0);
+}
+
+.errorencadmin{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 340px;
+    left: 340px;
+    width: 200px;
+    color: red;
+    text-shadow: 1px 1px 5px black;
+    font-family: 'Rubik', sans-serif;
+    font-size: 20px;
+    opacity: 0;
+    z-index: -1;
+}
+
+.pisosadmin{
+    display: flex;
+    width: 600px;
+    height: 400px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0px 20px 0px 20px;
+    opacity: 0;
+    z-index: -1;
+}
+
+.pisos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    flex-direction: column;
+}
+
+.sub1, .sub2, .sub3, .pis1, .pis2, .pis3, .pis4, .pis5, .pis6, .pis7, .pis8, .pis9{
+    width: 50px;
+    height: 50px;
+    background: rgb(21,21,21);
+    border-radius: 50%;
+    border: 4px solid black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+:is(.sub1, .sub2, .sub3, .pis1, .pis2, .pis3, .pis4, .pis5, .pis6, .pis7, .pis8, .pis9):hover{
+    background: rgb(41,41,41);
+}
+
+.plazasM3, .plazasM2, .plazasM1, .plazasP1, .plazasP2, .plazasP3, .plazasP4, .plazasP5, .plazasP6, .plazasP7, .plazasP8, .plazasP9{
+    position: absolute;
+    width: 440px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transform: translateX(-57%) scaleX(1%);
+}
+.plazasM3{
+    top: 17px;
+    left: 80px;
+    transform: translateX(-57%) scaleX(1%);
+}
+.plazasM2{
+    top: 80px;
+    left: 80px;
+    transform: translateX(-57%) scaleX(1%);
+}
+.plazasM1{
+    top: 143px;
+    left: 80px; 
+    transform: translateX(-57%) scaleX(1%);
+}
+.plazasP1{
+    top: 206px;
+    left: 80px; 
+    transform: translateX(-57%) scaleX(1%);
+}
+.plazasP2{
+    top: 269px;
+    left: 80px; 
+    transform: translateX(-57%) scaleX(1%);
+}
+.plazasP3{
+    top: 332px;
+    left: 80px; 
+    transform: translateX(-57%) scaleX(1%);
+}
+.plazasP4{
+    top: 17px;
+    right: 80px;
+    transform: translateX(57%) scaleX(1%);
+}
+.plazasP5{
+    top: 80px;
+    right: 80px;
+    transform: translateX(57%) scaleX(1%);
+}
+.plazasP6{
+    top: 143px;
+    right: 80px; 
+    transform: translateX(57%) scaleX(1%);
+}
+.plazasP7{
+    top: 206px;
+    right: 80px; 
+    transform: translateX(57%) scaleX(1%);
+}
+.plazasP8{
+    top: 269px;
+    right: 80px; 
+    transform: translateX(57%) scaleX(1%);
+}
+.plazasP9{
+    top: 332px;
+    right: 80px;
+    transform: translateX(57%) scaleX(1%);
+}
+.plazasM3 label, .plazasM2 label, .plazasM1 label, .plazasP1 label, .plazasP2 label, .plazasP3 label, .plazasP4 label, .plazasP5 label, .plazasP6 label, .plazasP7 label, .plazasP8 label, .plazasP9 label{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    background: red;
+    color: black;
+    text-shadow: 1px 1px 1px white, -1px -1px 1px white, 1px -1px 1px white, -1px 1px 1px white;
+    border-radius: 50%;
+    font-family: 'Rubik', sans-serif;
+    font-size: 20px;
+    border: 2px solid black;
+}
+
+@keyframes plazasabrir{
+0%{
+    transform: translateX(-57%) scaleX(1%);
+}
+100%{
+    transform: translateX(0%) scaleX(100%);
+}
+}
+@keyframes plazasabrir2{
+    0%{
+        transform: translateX(57%) scaleX(1%);
+    }
+    100%{
+        transform: translateX(0%) scaleX(100%);
+    }
+    }
+@keyframes plazascerrar{
+0%{
+    transform: translateX(0%) scaleX(100%);
+
+}
+100%{
+    transform: translateX(-57%) scaleX(1%);
+}
+}
+
+.informesadmin{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 600px;
+    height: 400px;
+    justify-content: center;
+    opacity: 0;
+    z-index: -1;
+}
+
+.opcionesinformesadmin{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    flex-direction: row;
+    position: absolute;
+    top: 20px;
+}
+.informesadmin button{
+    width: 100px;
+    height: 60px;
+    cursor: pointer;
+    background: rgb(61,61,61);
+    border: 3px solid black;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px black;
+    color: white;
+    font-family: 'Rubik', sans-serif;
+    font-size: 15px;
+    text-shadow: 1px 1px 5px black;
+}
+.informesadmin button:hover{
+    background: rgb(81,81,81);
+}
+
+.viewinformesadmin{
+    position: absolute;
+    bottom: 20px;
+    width: 500px;
+    height: 250px;
+    box-shadow: 0px 0px 10px black;
+    border-radius: 10px;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+.viewinformesadmin::-webkit-scrollbar{
+    width: 10px;
+    background: yellow;
+}
+.viewinformesadmin::-webkit-scrollbar-track{
+    background: rgb(41,41,41);
+}
+.viewinformesadmin::-webkit-scrollbar-thumb{
+    background: white;
+    border-radius: 50px;
+    box-shadow: 0px 0px 10px black;
+}
+
+.gananciasdiariasinforme, .gananciasmensualesinforme, .visitasdiariasinforme, .visitasmensualesinforme, .morososinforme{
+    position: absolute;
+    width: 450px;
+}
+
+.titulosadmin{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+:is(.gananciasdiariasinforme, .gananciasmensualesinforme, .visitasdiariasinforme, .visitasmensualesinforme, .morososinforme) div{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin: 0px 20px 0px 20px;
+    color: white;
+    font-family: 'Rubik', sans-serif;
+    font-size: 20px;
+    text-shadow: 1px 1px 5px black;
+}
+:is(.gananciasdiariasinforme, .gananciasmensualesinforme, .visitasdiariasinforme, .visitasmensualesinforme, .morososinforme) div label:nth-child(1){
+    display: flex;
+    flex-direction: column;
+    margin: 5px 0px 5px 0px;
+    align-items: flex-start;
+}
+:is(.gananciasdiariasinforme, .gananciasmensualesinforme, .visitasdiariasinforme, .visitasmensualesinforme, .morososinforme) div label:nth-child(2){
+    display: flex;
+    flex-direction: column;
+    margin: 5px 0px 5px 0px;
+    align-items: flex-end;
+}
+:is(.gananciasdiariasinforme, .gananciasmensualesinforme, .visitasdiariasinforme, .visitasmensualesinforme, .morososinforme) div label::after{
+    content: '';
+    width: 5000%;
+    height: 1px;
+    background: rgb(100,100,100);
+}
+
+.xsaliradmin{
+    left: -50px;
+}
+
+.accionesadmin{
+    position: absolute;
+    top: 0px;
+    left: -300px;
+    width: 200px;
+    height: 300px;
+    background: rgb(51,51,51);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 10px;
+    border: 3px solid black;
+    box-shadow: 0px 0px 10px black;
+}
+
+.accionesadmin label:nth-child(1){
+    color: white;
+    font-family: 'Rubik', sans-serif;
+    font-size: 25px;
+    text-shadow: 1px 1px 5px black, 1px -1px 5px black, -1px 1px 5px black, -1px -1px 5px black;
+}
+
+.inputprecioinvitado{
+    margin: 10px;
+    width: 150px;
+    height: 40px;
+    border-radius: 10px;
+    background: rgb(51,51,51);
+    font-family: 'Rubik', sans-serif;
+    font-size: 20px;
+    color: white;
+    border: 2px solid red;
+}
+
+:is(.inputprecioinvitado, .inputmensualidad)::placeholder{
+    color: rgb(0, 0, 0);
+}
+
+.labelprecioinvitado{
+    position: absolute;
+    width: 112px;
+    left: 22px;
+    top: 98px;
+    text-align: center;
+    font-family: 'Rubik', sans-serif;
+    font-size: 20px;
+    color: rgb(208, 0, 0);
+    border-radius: 50%;
+    background: rgb(51,51,51,1);
+    opacity: 0;
+    animation: labelprecioinvitado 0.3s forwards;
+    z-index: -1;
+}
+
+.buttonprecioinvitado{
+    border-radius: 5px;
+    background: red;
+    color: white;
+    text-shadow: 1px 1px 5px black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    font-family: 'Rubik', sans-serif;
+    cursor: pointer;
+}
+
+.inputprecioinvitado:placeholder-shown + .labelprecioinvitado{
+    animation: none;
+}
+
+@keyframes labelprecioinvitado{
+0%{
+    transform: translateY(0%);
+    color: rgb(0, 0, 0);
+    text-shadow: 0px 0px 0px black;
+    opacity: 0;
+    z-index: -1;
+}
+100%{
+    transform: translateY(-100%);
+    color: red;
+    text-shadow: 2px 2px 3px black;
+    opacity: 1;
+    z-index: 0;
+}
+}
+
+
+.inputmensualidad{
+    margin: 10px;
+    width: 150px;
+    height: 40px;
+    border-radius: 10px;
+    background: rgb(51,51,51);
+    font-family: 'Rubik', sans-serif;
+    font-size: 20px;
+    color: white;
+    border: 2px solid red;
+}
+
+.labelmensualidad{
+    position: absolute;
+    width: 125px;
+    left: 25px;
+    top: 206px;
+    text-align: center;
+    font-family: 'Rubik', sans-serif;
+    font-size: 20px;
+    color: rgb(208, 0, 0);
+    border-radius: 50%;
+    background: rgb(51,51,51,1);
+    opacity: 0;
+    animation: labelprecioinvitado 0.3s forwards;
+    z-index: -1;
+}
+
+.buttonmensualidad{
+    border-radius: 5px;
+    background: red;
+    color: white;
+    text-shadow: 1px 1px 5px black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    font-family: 'Rubik', sans-serif;
+    cursor: pointer;
+}
+
+.inputmensualidad:placeholder-shown + .labelmensualidad{
+    animation: none;
+}

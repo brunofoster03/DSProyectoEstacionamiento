@@ -1,0 +1,14 @@
+body{
+  overflow: hidden;
+  background-size: cover;
+  backdrop-filter: blur(10px) brightness(1.0);
+  background: url('./Imagenes/Background.jpg');
+  user-select: none;
+}
+a{
+  text-decoration: none;
+}
+select, input, button{
+}
+.App {
+}
